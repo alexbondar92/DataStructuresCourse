@@ -1,0 +1,2 @@
+g330K_full: 4.644
+g3.3milion_full: 47.473

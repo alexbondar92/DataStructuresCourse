@@ -1,0 +1,254 @@
+Init
+#
+#No Gladiators! returns -1
+GetTopGladiator -1
+#
+#SUCCESS, but no gladiators to show
+GetAllGladiatorsByLevel -1
+#
+#SUCCESS
+AddTrainer 4
+AddTrainer 3
+AddTrainer 7
+AddTrainer 15
+#
+#SUCCESS
+UpdateLevels 1 1
+#
+#Still no Gladiators! returns -1
+GetTopGladiator -1
+#
+#SUCCESS
+BuyGladiator 10 4 2
+#
+#SUCCESS, but no gladiators to show for trainer 3
+GetAllGladiatorsByLevel 3
+#
+#SUCCESS
+FreeGladiator 10
+#
+#Still no Gladiators! returns -1
+GetTopGladiator -21
+#
+#SUCCESS, but no gladiators to show for trainer 4
+GetAllGladiatorsByLevel 4
+#
+#INVALID_INPUT - bad trainer id
+AddTrainer 0
+AddTrainer -3
+#
+#FAILURE - trainer exists
+AddTrainer 7
+#
+#SUCCESS
+BuyGladiator 101 4 50
+BuyGladiator 102 3 25
+BuyGladiator 103 7 1
+BuyGladiator 104 7 45
+#
+#This trainer has no gladiators! returns -1
+GetTopGladiator 15
+#
+#SUCCESS, but no gladiators to show
+GetAllGladiatorsByLevel 15
+#
+#INVALID_INPUT - bad gladiatorID
+BuyGladiator 0 4 50
+BuyGladiator -10 4 50
+#
+#INVALID_INPUT - bad trainerID
+BuyGladiator 101 0 50
+BuyGladiator 101 -3 50
+#
+#INVALID_INPUT - bad level
+BuyGladiator 101 4 0
+BuyGladiator 101 4 -50
+#
+#FAILURE - gladiator exists
+BuyGladiator 101 4 55
+BuyGladiator 102 4 555
+#
+#FAILURE - trainerID doesn't exist
+BuyGladiator 105 14 55
+#
+#SUCCESS
+FreeGladiator 104
+#
+#INVALID_INPUT - bad gladiatorID
+FreeGladiator 0
+FreeGladiator -9
+#
+#FAILURE - gladiatorID doesn't exist
+FreeGladiator 110
+#
+#FAILURE - gladiatorID doesn't exist - it has been removed earlier
+FreeGladiator 104
+#
+#SUCCESS
+LevelUp 102 1
+#
+#INVALID_INPUT - bad gladiatorID
+LevelUp 0 2
+LevelUp -9 2
+#
+#INVALID_INPUT - bad levelIncrease
+LevelUp 102 0
+LevelUp 102 -6
+#
+#FAILURE - gladiatorID doesn't exist
+LevelUp 110 14
+#
+#FAILURE - gladiatorID doesn't exist - it has been removed earlier
+LevelUp 104 15
+#
+#SUCCESS
+BuyGladiator 104 3 50
+BuyGladiator 105 4 55
+BuyGladiator 106 7 100
+BuyGladiator 109 3 50
+BuyGladiator 107 4 50
+BuyGladiator 108 7 50
+#
+#SUCCESS - the top gladiator in colosseum is 106
+GetTopGladiator -1
+#
+#SUCCESS
+LevelUp 105 50
+#
+#SUCCESS - the top gladiator in colosseum is now 105
+GetTopGladiator -10
+#
+#SUCCESS - the top gladiator of trainer 3 is 104
+GetTopGladiator 3
+#
+#SUCCESS - the top gladiator of trainer 4 is 105
+GetTopGladiator 4
+#
+#SUCCESS - the top gladiator of trainer 7 is 106
+GetTopGladiator 7
+#
+#INVALID_INPUT - bad trainerID
+GetTopGladiator 0
+#
+#FAILURE - trainerID doesn't exist
+GetTopGladiator 14
+#
+#SUCCESS - 104, 109, 102
+GetAllGladiatorsByLevel 3
+#
+#SUCCESS - 105, 101, 107
+GetAllGladiatorsByLevel 4
+#
+#SUCCESS - 106, 108,103
+GetAllGladiatorsByLevel 7
+#
+#SUCCESS - 105, 106, 101, 104, 107, 108, 109, 102, 103
+GetAllGladiatorsByLevel -1
+#
+#INVALID_INPUT - bad trainerID
+GetAllGladiatorsByLevel 0
+#
+#FAILURE - trainerID doesn't exists
+GetAllGladiatorsByLevel 14
+#
+#INVALID_INPUT - bad gladiatorID
+UpgradeGladiator 0 110
+UpgradeGladiator -444 110
+#
+#INVALID_INPUT - bad upgradedID
+UpgradeGladiator 101 0
+UpgradeGladiator 101 -34
+#
+#FAILURE - upgradedID already exists
+UpgradeGladiator 101 105 
+#
+#FAILURE - upgradedID already exists (and equals to gladiatorID)
+UpgradeGladiator 101 101
+#
+#FAILURE - gladiatorID doesn't exist
+UpgradeGladiator 111 105 
+#
+#SUCCESS
+UpgradeGladiator 105 110
+#
+#FAILURE - gladiatorID doesn't exist (it has just been upgraded)
+UpgradeGladiator 105 110
+#
+#FAILURE - gladiatorID doesn't exist (it has just been upgraded)
+FreeGladiator 105
+#
+#SUCCESS - the top gladiator of trainer 4 is now 110
+GetTopGladiator 4
+#
+#SUCCESS - just adding some gladiators and leveling them up, to have some splays in the trees
+BuyGladiator 105 4 115
+BuyGladiator 111 7 1
+LevelUp 111 50
+BuyGladiator 112 4 75
+BuyGladiator 113 4 20
+BuyGladiator 114 4 1
+LevelUp 114 50
+LevelUp 113 15
+LevelUp 114 50
+BuyGladiator 115 4 200
+LevelUp 115 1
+BuyGladiator 116 4 1
+LevelUp 113 15
+LevelUp 116 201
+BuyGladiator 117 3 11
+BuyGladiator 118 15 460
+LevelUp 107 100
+#
+#SUCCESS - Inject steroids to some gladiators
+UpdateLevels 3 4
+#
+#SUCCESS - 105, 118, 114, 111, 116, 115, 108, 107, 110, 102, 106, 112, 101, 104, 109, 113, 117, 103
+GetAllGladiatorsByLevel -1
+#
+#SUCCESS - the top gladiator in colosseum is now 105
+GetTopGladiator -10
+#
+#SUCCESS - the top gladiator of trainer 3 is 102
+GetTopGladiator 3
+#
+#SUCCESS - the top gladiator of trainer 4 is 105
+GetTopGladiator 4
+#
+#SUCCESS - the top gladiator of trainer 7 is 111
+GetTopGladiator 7
+#
+#SUCCESS - the top gladiator of trainer 15 is 118
+GetTopGladiator 15
+#
+#SUCCESS - Inject nothing to everyone, nothing happens.
+UpdateLevels 1 1
+#
+#SUCCESS - No gladiator should match the stimulantCode
+UpdateLevels 100 11
+#
+#SUCCESS - 105, 118, 114, 111, 116, 115, 108, 107, 110, 102, 106, 112, 101, 104, 109, 113, 117, 103
+GetAllGladiatorsByLevel -1
+#
+#INVALID_INPUT - bad stimulantCode
+UpdateLevels 0 1
+UpdateLevels -1 1
+#
+#INVALID_INPUT - bad stimulantFactor
+UpdateLevels 1 0
+UpdateLevels 1 -1
+#
+#SUCCESS
+FreeGladiator 118
+FreeGladiator 105
+#
+#SUCCESS, but no gladiators to show
+GetAllGladiatorsByLevel 15
+#No Gladiators! returns -1
+GetTopGladiator 15
+#
+#SUCCESS -114, 111, 116, 115, 108, 107, 110, 102, 106, 112, 101, 104, 109, 113, 117, 103
+GetAllGladiatorsByLevel -1
+#SUCCESS - both 114
+GetTopGladiator -1
+GetTopGladiator 4
+Quit

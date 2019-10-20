@@ -1,0 +1,331 @@
+Init done.
+#
+#No Gladiators! returns -1
+Gladiator with highest level is: -1
+#
+#SUCCESS, but no gladiators to show
+and there are no more gladiators!
+#
+#SUCCESS
+AddTrainer: SUCCESS
+AddTrainer: SUCCESS
+AddTrainer: SUCCESS
+AddTrainer: SUCCESS
+#
+#SUCCESS
+UpdateLevels: SUCCESS
+#
+#Still no Gladiators! returns -1
+Gladiator with highest level is: -1
+#
+#SUCCESS
+BuyGladiator: SUCCESS
+#
+#SUCCESS, but no gladiators to show for trainer 3
+and there are no more gladiators!
+#
+#SUCCESS
+FreeGladiator: SUCCESS
+#
+#Still no Gladiators! returns -1
+Gladiator with highest level is: -1
+#
+#SUCCESS, but no gladiators to show for trainer 4
+and there are no more gladiators!
+#
+#INVALID_INPUT - bad trainer id
+AddTrainer: INVALID_INPUT
+AddTrainer: INVALID_INPUT
+#
+#FAILURE - trainer exists
+AddTrainer: FAILURE
+#
+#SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+#
+#This trainer has no gladiators! returns -1
+Gladiator with highest level is: -1
+#
+#SUCCESS, but no gladiators to show
+and there are no more gladiators!
+#
+#INVALID_INPUT - bad gladiatorID
+BuyGladiator: INVALID_INPUT
+BuyGladiator: INVALID_INPUT
+#
+#INVALID_INPUT - bad trainerID
+BuyGladiator: INVALID_INPUT
+BuyGladiator: INVALID_INPUT
+#
+#INVALID_INPUT - bad level
+BuyGladiator: INVALID_INPUT
+BuyGladiator: INVALID_INPUT
+#
+#FAILURE - gladiator exists
+BuyGladiator: FAILURE
+BuyGladiator: FAILURE
+#
+#FAILURE - trainerID doesn't exist
+BuyGladiator: FAILURE
+#
+#SUCCESS
+FreeGladiator: SUCCESS
+#
+#INVALID_INPUT - bad gladiatorID
+FreeGladiator: INVALID_INPUT
+FreeGladiator: INVALID_INPUT
+#
+#FAILURE - gladiatorID doesn't exist
+FreeGladiator: FAILURE
+#
+#FAILURE - gladiatorID doesn't exist - it has been removed earlier
+FreeGladiator: FAILURE
+#
+#SUCCESS
+LevelUp: SUCCESS
+#
+#INVALID_INPUT - bad gladiatorID
+LevelUp: INVALID_INPUT
+LevelUp: INVALID_INPUT
+#
+#INVALID_INPUT - bad levelIncrease
+LevelUp: INVALID_INPUT
+LevelUp: INVALID_INPUT
+#
+#FAILURE - gladiatorID doesn't exist
+LevelUp: FAILURE
+#
+#FAILURE - gladiatorID doesn't exist - it has been removed earlier
+LevelUp: FAILURE
+#
+#SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+#
+#SUCCESS - the top gladiator in colosseum is 106
+Gladiator with highest level is: 106
+#
+#SUCCESS
+LevelUp: SUCCESS
+#
+#SUCCESS - the top gladiator in colosseum is now 105
+Gladiator with highest level is: 105
+#
+#SUCCESS - the top gladiator of trainer 3 is 104
+Gladiator with highest level is: 104
+#
+#SUCCESS - the top gladiator of trainer 4 is 105
+Gladiator with highest level is: 105
+#
+#SUCCESS - the top gladiator of trainer 7 is 106
+Gladiator with highest level is: 106
+#
+#INVALID_INPUT - bad trainerID
+GetTopGladiator: INVALID_INPUT
+#
+#FAILURE - trainerID doesn't exist
+GetTopGladiator: FAILURE
+#
+#SUCCESS - 104, 109, 102
+Level	||	Gladiator
+1	||	104
+2	||	109
+3	||	102
+and there are no more gladiators!
+#
+#SUCCESS - 105, 101, 107
+Level	||	Gladiator
+1	||	105
+2	||	101
+3	||	107
+and there are no more gladiators!
+#
+#SUCCESS - 106, 108,103
+Level	||	Gladiator
+1	||	106
+2	||	108
+3	||	103
+and there are no more gladiators!
+#
+#SUCCESS - 105, 106, 101, 104, 107, 108, 109, 102, 103
+Level	||	Gladiator
+1	||	105
+2	||	106
+3	||	101
+4	||	104
+5	||	107
+6	||	108
+7	||	109
+8	||	102
+9	||	103
+and there are no more gladiators!
+#
+#INVALID_INPUT - bad trainerID
+GetAllGladiatorsByLevel: INVALID_INPUT
+#
+#FAILURE - trainerID doesn't exists
+GetAllGladiatorsByLevel: FAILURE
+#
+#INVALID_INPUT - bad gladiatorID
+UpgradeGladiator: INVALID_INPUT
+UpgradeGladiator: INVALID_INPUT
+#
+#INVALID_INPUT - bad upgradedID
+UpgradeGladiator: INVALID_INPUT
+UpgradeGladiator: INVALID_INPUT
+#
+#FAILURE - upgradedID already exists
+UpgradeGladiator: FAILURE
+#
+#FAILURE - upgradedID already exists (and equals to gladiatorID)
+UpgradeGladiator: FAILURE
+#
+#FAILURE - gladiatorID doesn't exist
+UpgradeGladiator: FAILURE
+#
+#SUCCESS
+UpgradeGladiator: SUCCESS
+#
+#FAILURE - gladiatorID doesn't exist (it has just been upgraded)
+UpgradeGladiator: FAILURE
+#
+#FAILURE - gladiatorID doesn't exist (it has just been upgraded)
+FreeGladiator: FAILURE
+#
+#SUCCESS - the top gladiator of trainer 4 is now 110
+Gladiator with highest level is: 110
+#
+#SUCCESS - just adding some gladiators and leveling them up, to have some splays in the trees
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+LevelUp: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+LevelUp: SUCCESS
+LevelUp: SUCCESS
+LevelUp: SUCCESS
+BuyGladiator: SUCCESS
+LevelUp: SUCCESS
+BuyGladiator: SUCCESS
+LevelUp: SUCCESS
+LevelUp: SUCCESS
+BuyGladiator: SUCCESS
+BuyGladiator: SUCCESS
+LevelUp: SUCCESS
+#
+#SUCCESS - Inject steroids to some gladiators
+UpdateLevels: SUCCESS
+#
+#SUCCESS - 105, 118, 114, 111, 116, 115, 108, 107, 110, 102, 106, 112, 101, 104, 109, 113, 117, 103
+Level	||	Gladiator
+1	||	105
+2	||	118
+3	||	114
+4	||	111
+5	||	116
+6	||	115
+7	||	108
+8	||	107
+9	||	110
+10	||	102
+11	||	106
+12	||	112
+13	||	101
+14	||	104
+15	||	109
+16	||	113
+17	||	117
+18	||	103
+and there are no more gladiators!
+#
+#SUCCESS - the top gladiator in colosseum is now 105
+Gladiator with highest level is: 105
+#
+#SUCCESS - the top gladiator of trainer 3 is 102
+Gladiator with highest level is: 102
+#
+#SUCCESS - the top gladiator of trainer 4 is 105
+Gladiator with highest level is: 105
+#
+#SUCCESS - the top gladiator of trainer 7 is 111
+Gladiator with highest level is: 111
+#
+#SUCCESS - the top gladiator of trainer 15 is 118
+Gladiator with highest level is: 118
+#
+#SUCCESS - Inject nothing to everyone, nothing happens.
+UpdateLevels: SUCCESS
+#
+#SUCCESS - No gladiator should match the stimulantCode
+UpdateLevels: SUCCESS
+#
+#SUCCESS - 105, 118, 114, 111, 116, 115, 108, 107, 110, 102, 106, 112, 101, 104, 109, 113, 117, 103
+Level	||	Gladiator
+1	||	105
+2	||	118
+3	||	114
+4	||	111
+5	||	116
+6	||	115
+7	||	108
+8	||	107
+9	||	110
+10	||	102
+11	||	106
+12	||	112
+13	||	101
+14	||	104
+15	||	109
+16	||	113
+17	||	117
+18	||	103
+and there are no more gladiators!
+#
+#INVALID_INPUT - bad stimulantCode
+UpdateLevels: INVALID_INPUT
+UpdateLevels: INVALID_INPUT
+#
+#INVALID_INPUT - bad stimulantFactor
+UpdateLevels: INVALID_INPUT
+UpdateLevels: INVALID_INPUT
+#
+#SUCCESS
+FreeGladiator: SUCCESS
+FreeGladiator: SUCCESS
+#
+#SUCCESS, but no gladiators to show
+and there are no more gladiators!
+#No Gladiators! returns -1
+Gladiator with highest level is: -1
+#
+#SUCCESS -114, 111, 116, 115, 108, 107, 110, 102, 106, 112, 101, 104, 109, 113, 117, 103
+Level	||	Gladiator
+1	||	114
+2	||	111
+3	||	116
+4	||	115
+5	||	108
+6	||	107
+7	||	110
+8	||	102
+9	||	106
+10	||	112
+11	||	101
+12	||	104
+13	||	109
+14	||	113
+15	||	117
+16	||	103
+and there are no more gladiators!
+#SUCCESS - both 114
+Gladiator with highest level is: 114
+Gladiator with highest level is: 114
+Quit done.
